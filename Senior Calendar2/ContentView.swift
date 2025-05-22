@@ -14,6 +14,7 @@ struct ContentView: View {
             VStack(spacing: 20) {
                 Spacer()
                 HStack {
+                    Spacer()
                     Text("My Activities")
                         .font(.largeTitle)
                         .fontWeight(.semibold)
@@ -24,7 +25,7 @@ struct ContentView: View {
                 Button(action: {
                     print("Button 1 tapped")
                 }) {
-                    Text("Button 1")
+                    Text("Vasity Soccer")
                         .font(.title2)
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity)
@@ -35,9 +36,9 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 Button(action: {
-                    print("Button 2 tapped")
+                    print("Knitting Club")
                 }) {
-                    Text("Button 2")
+                    Text("Knitting Club")
                         .font(.title2)
                         .fontWeight(.semibold)
                         .frame(maxWidth: .infinity)
@@ -48,6 +49,7 @@ struct ContentView: View {
                         .cornerRadius(10)
                 }
                 HStack {
+                    Spacer()
                     Text("Upcoming")
                         .font(.largeTitle)
                         .fontWeight(.semibold)
@@ -58,7 +60,7 @@ struct ContentView: View {
                         Button(action: {
                             print("Button 2 tapped")
                         }) {
-                            Text("Button 3")
+                            Text("Boys Swim Meet")
                                 .font(.title2)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity)
@@ -71,7 +73,7 @@ struct ContentView: View {
                         Button(action: {
                             print("Button 2 tapped")
                         }) {
-                            Text("Button 4")
+                            Text("Jazz Concert")
                                 .font(.title2)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity)
@@ -84,7 +86,7 @@ struct ContentView: View {
                         Button(action: {
                             print("Button 2 tapped")
                         }) {
-                            Text("Button 5")
+                            Text("Senior Tech Class")
                                 .font(.title2)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity)
@@ -135,14 +137,14 @@ struct ContentView: View {
                             
                            
                                 VStack {
-                                    
-                                    NavigationLink(destination: Calendar()) {
-                                        Image(systemName: "calendar")
-                                            .resizable()
-                                            .foregroundColor(.black)
-                                            .background(Color(red: 0.95, green: 0.95, blue: 0.95))
-                                            .frame(maxWidth:.infinity, maxHeight: .infinity,alignment: .center)
-                                        
+                                    Button(action: {}) {
+                                        NavigationLink(destination: Calendar()) {
+                                            Image(systemName: "calendar")
+                                                .resizable()
+                                                .foregroundColor(.black)
+                                                .background(Color(red: 0.95, green: 0.95, blue: 0.95))
+                                                .frame(maxWidth:.infinity, maxHeight: .infinity,alignment: .center)
+                                        }
                                     }
                                 }
                                 .navigationTitle("")
@@ -150,12 +152,16 @@ struct ContentView: View {
                                 .frame(width: 70.0, height: 70.0)
                                 
                                 Spacer()
+                            VStack {
                                 Button(action: {}) {
-                                    Image(systemName: "gearshape")
-                                        .resizable()
-                                        .foregroundColor(.black)
-                                        .frame(maxWidth:.infinity, maxHeight: .infinity,alignment: .center)
+                                    NavigationLink(destination: Settings()) {
+                                        Image(systemName: "gearshape")
+                                            .resizable()
+                                            .foregroundColor(.black)
+                                            .frame(maxWidth:.infinity, maxHeight: .infinity,alignment: .center)
+                                    }
                                 }
+                            }
                                 .frame(width: 70, height: 70)
                                 Spacer()
                                 
