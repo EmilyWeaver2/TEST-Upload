@@ -22,18 +22,7 @@ struct ContentView: View {
                     Spacer()
                 }
                 
-                Button(action: {
-                    print("Button 1 tapped")
-                }) {
-                    Text("Vasity Soccer")
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .frame(maxWidth: .infinity)
-                        .padding()
-                        .frame(width: 354.0, height: 90.0)
-                        .background(Color(red: 0.3, green: 0.6, blue: 0.4))
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        
                 }
                 Button(action: {
                     print("Knitting Club")
@@ -138,7 +127,7 @@ struct ContentView: View {
                            
                                 VStack {
                                     Button(action: {}) {
-                                        NavigationLink(destination: Calendar()) {
+                                        NavigationLink(destination: CalendarView()) {
                                             Image(systemName: "calendar")
                                                 .resizable()
                                                 .foregroundColor(.black)
